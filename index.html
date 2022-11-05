@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>store</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="add">
+                <div class="add-category">
+                    <h2>add category</h2>
+                    <form>
+                        <input id="category-name" type="text" autocomplete="off" placeholder="category name" />
+                        <div>
+                            <input id="add-category-btn" type="submit" value="Add" />
+                            <button id="hidden-category-btn">hidden</button>
+                        </div>
+                    </form>
+                    <div class="categoris">
+                        <!-- <div class="category">
+                            <p class="category-name">test</p>
+                            <div>
+                                <button class="delete-category-with-items"><i class="fa-solid fa-trash-can"></i> Delete with items</button>
+                                <button class="delete-category"><i class="fa-regular fa-trash-can"></i> Delete</button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="add-product">
+                    <h2>add product</h2>
+                    <form>
+                        <input id="add-product-name" type="text" autocomplete="off" placeholder="product name" />
+                        <input id="add-product-price" type="text" autocomplete="off" placeholder="price" />
+                        <input id="add-product-quantity" type="number" min="0" placeholder="quantity" />
+                        <select id="add-product-category">
+                            <option selected hidden>category</option>
+                            <option selected hidden>global</option>
+                        </select>
+                        <div>
+                            <input id="add-product-btn" type="submit" value="Add" />
+                            <input id="import-input" type="file" accept="text/plain , application/json" hidden>
+                            <button id="import"><i class="fa-solid fa-file-import"></i> import</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="view">
+                <div class="filters">
+                    <div>
+                        <input id="search" type="text" autocomplete="off" placeholder="search" autocomplete="off" />
+                        <i number="1" class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div>
+                        <button id="export"><i class="fa-solid fa-file-export"></i> export</button>
+                        <select id="filter-category">
+                            <option>all category</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="products">
+                    <!-- <div class="product">
+                        <h3 class="product-name">iphone 13 pro max</h3>
+                        <span>
+                            <p class="date">۱۴۰۰/۵/۴</p>
+                            <p class="product-price"><i class="fa-solid fa-dollar-sign"></i> 120000</p>
+                            <p class="product-quantity">9</p>
+                            <p class="product-category"><i class="fa-solid fa-list"></i> phone</p>
+                            <button class="edit-product"><i class="fa-solid fa-pen"></i> Edit</button>
+                            <button class="delete-product"><i class="fa-solid fa-trash-can"></i> Delete</button>
+                        </span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <script>
+            let a = document.querySelector("form button")
+            let b = document.querySelectorAll("input[type='submit']")
+            a.addEventListener("click", e => e.preventDefault())
+            b[0].addEventListener("click", e => e.preventDefault())
+            b[1].addEventListener("click", e => e.preventDefault())
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

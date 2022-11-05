@@ -1,0 +1,411 @@
+@font-face {
+    font-family: "byekan";
+    src: url("fonts/iranyekanwebregular.woff");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #222831;
+    min-height: 100vh;
+    color: white;
+}
+
+input[type="text"],
+input[type="number"] {
+    user-select: auto;
+    outline: none;
+}
+
+.container {
+    background-color: #393e46;
+    margin: auto;
+    padding: 10px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-category {
+    background-color: #22323d;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.add-category h2 {
+    margin: 10px auto;
+    color: rgb(155, 150, 150);
+    font-size: 25px;
+}
+
+.add-category form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-category form input[type="text"] {
+    width: 96%;
+    height: 60px;
+    padding: 10px;
+    font-size: 22px;
+    background-color: transparent;
+    border: 2px solid rgb(155, 150, 150);
+    color: white;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+.add-category form input[type="text"]:focus {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.add-category form input[type="submit"],
+.add-category form button {
+    width: 75px;
+    height: 45px;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #1ab188;
+    font-size: 20px;
+    color: white;
+    margin-top: 5px;
+}
+
+.add-category form input[type="submit"]:hover {
+    background-color: #227e65;
+    cursor: pointer;
+}
+
+.add-category form button {
+    width: 90px;
+    background-color: transparent;
+    border: 2px solid rgb(155, 150, 150);
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+.add-category form button:hover {
+    background-color: rgb(77, 78, 80);
+}
+
+.categoris {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    font-size: 0;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.categoris::-webkit-scrollbar {
+    width: 15px;
+}
+
+.categoris::-webkit-scrollbar-thumb {
+    background-color: #5a5656;
+}
+
+.categoris::-webkit-scrollbar-track {
+    background-color: #222831;
+}
+
+.categoris .category {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.01rem solid gray;
+}
+
+.categoris .category p {
+    font-size: 20px;
+}
+
+.categoris .category button {
+    background-color: #007bff;
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: none;
+    margin: 0 5px;
+}
+
+.categoris .category .delete-category-with-items {
+    background-color: #e21f1f;
+}
+
+.add-product {
+    background-color: #22323d;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.add-product h2 {
+    margin: 10px auto;
+    color: rgb(155, 150, 150);
+    font-size: 25px;
+}
+
+.add-product form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-product form input:not([type="file"]),
+.add-product form select {
+    width: 96%;
+    height: 60px;
+    padding: 10px;
+    font-size: 22px;
+    background-color: transparent;
+    border: 2px solid rgb(155, 150, 150);
+    color: white;
+    margin: 5px 0;
+    border-radius: 10px;
+    outline: none;
+}
+
+.add-product form select {
+    color: #757575;
+}
+
+.add-product form select:focus {
+    border-color: white;
+}
+
+.add-product form select option {
+    background-color: #22323d;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.add-product form input[type="submit"] {
+    width: 75px;
+    height: 45px;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #1ab188;
+    font-size: 20px;
+    color: white;
+    margin-top: 5px;
+}
+
+.add-product form input[type="submit"]:hover {
+    background-color: #227e65;
+    cursor: pointer;
+}
+
+.add-product form input:focus {
+    border-color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+}
+
+.add-product form #import {
+    border: none;
+    border-radius: 6px;
+    height: 45px;
+    padding: 12px;
+    background-color: #007bff;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 0 0 0 5px;
+    position: relative;
+    top: 1px;
+}
+
+.add-product form #import:hover {
+    background-color: #0765ca;
+}
+
+.view {
+    margin-top: 10px;
+    background-color: #22323d;
+    min-height: 500px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.view .filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.view .filters div {
+    font-size: 0;
+}
+
+.view .filters div i[number="1"] {
+    color: rgb(155, 150, 150);
+    border: 2px solid rgb(155, 150, 150);
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+
+.view .filters div input {
+    padding: 10px;
+    width: 300px;
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgb(155, 150, 150);
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    color: rgb(155, 150, 150);
+}
+
+.view .filters div input:focus,
+.view .filters div input:focus ~ i {
+    border-color: white;
+    color: white;
+}
+
+.view .filters select {
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid rgb(155, 150, 150);
+    color: rgb(155, 150, 150);
+    outline: none;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.view .filters select:focus {
+    border-color: white;
+    color: white;
+}
+
+.view .filters select option {
+    background-color: #22323d;
+}
+
+.view #export {
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+    background-color: #d81e1e;
+    color: white;
+    cursor: pointer;
+}
+
+.view #export:hover {
+    background-color: #9e1212;
+}
+
+.view #products {
+    display: flex;
+    flex-direction: column;
+}
+
+.view .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 0.01rem solid gray;
+}
+
+.view .product h3 {
+    background-color: #6639a6;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.view .product:first-child {
+    border-top: 0.01rem solid gray;
+}
+
+.view .product span {
+    display: flex;
+    align-items: center;
+}
+
+.view .product span > * {
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+.view .product .date {
+    font-family: "byekan";
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.view .product .product-price {
+    background-color: #fd7e14;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.view .product .product-quantity {
+    background-color: gray;
+    padding: 10px;
+    border-radius: 50px;
+    min-width: 30px;
+    height: 30px;
+    line-height: 12px;
+    text-align: center;
+}
+
+.view .product .product-category {
+    background-color: #28a745;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.view .product .edit-product {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.view .product .delete-product {
+    background-color: #e21f1f;
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+}
+
+.empty-value {
+    border-color: red !important;
+}
